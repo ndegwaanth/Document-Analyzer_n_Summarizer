@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Humanizer & Summarizer | Transform AI Text Naturally</title>
+    <title>AI Text Analyzer & Summarizer | Smart Content Processing</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
     <link
@@ -15,8 +15,8 @@
     <header class="hero">
       <nav>
         <div class="logo">
-          <i class="fas fa-robot"></i>
-          <span>HumanizeAI</span>
+          <i class="fas fa-chart-line"></i>
+          <span>TextAnalyzerAI</span>
         </div>
         <div class="nav-links">
           <a href="#features">Features</a>
@@ -30,57 +30,61 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>
-            Transform AI Text into
-            <span class="highlight">Natural Human Writing</span>
+            Advanced <span class="highlight">AI Text Analysis</span> &
+            Summarization
           </h1>
           <p>
-            Our advanced AI humanizer makes computer-generated content sound
-            authentically human while preserving its meaning and quality.
+            Unlock insights from your text with our powerful AI analyzer that
+            detects patterns, extracts key information, and creates concise
+            summaries.
           </p>
           <div class="cta-buttons">
-            <a href="#demo" class="btn-primary">Try Demo</a>
-            <a href="#how-it-works" class="btn-secondary">Learn More</a>
+            <a href="#demo" class="btn-primary">Try Live Demo</a>
+            <a href="#how-it-works" class="btn-secondary">See Analysis</a>
           </div>
         </div>
         <div class="hero-image">
           <img
             src="{% static 'images/few.jpeg' %}"
-            alt="AI Humanizer Illustration"
+            alt="Text Analysis Illustration"
           />
         </div>
       </div>
     </header>
 
     <section class="features" id="features">
-      <h2>Powerful Features</h2>
+      <h2>Powerful Analysis Features</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <i class="fas fa-language"></i>
-          <h3>Natural Language Conversion</h3>
+          <i class="fas fa-search"></i>
+          <h3>Deep Text Analysis</h3>
           <p>
-            Transform robotic AI text into flowing, natural human language that
-            resonates with readers.
+            Identify key themes, sentiment, and patterns in any text with our
+            advanced NLP algorithms.
           </p>
         </div>
         <div class="feature-card">
           <i class="fas fa-compress-alt"></i>
           <h3>Smart Summarization</h3>
           <p>
-            Condense lengthy content while maintaining key points and
-            readability.
+            Generate concise summaries while preserving the most important
+            information and context.
           </p>
         </div>
         <div class="feature-card">
-          <i class="fas fa-fingerprint"></i>
-          <h3>Undetectable Rewriting</h3>
-          <p>Make AI content pass as human-written even under scrutiny.</p>
+          <i class="fas fa-chart-pie"></i>
+          <h3>Data Visualization</h3>
+          <p>
+            Visualize text metrics and patterns through interactive charts and
+            graphs.
+          </p>
         </div>
         <div class="feature-card">
-          <i class="fas fa-sliders-h"></i>
-          <h3>Tone Adjustment</h3>
+          <i class="fas fa-tachometer-alt"></i>
+          <h3>Performance Metrics</h3>
           <p>
-            Customize the output tone from casual to professional based on your
-            needs.
+            Get readability scores, keyword density, and other quantitative text
+            measurements.
           </p>
         </div>
       </div>
@@ -88,61 +92,114 @@
 
     <section class="demo" id="demo">
       <div class="demo-container">
-        <h2>See It in Action</h2>
+        <h2>Experience the Power of AI Analysis</h2>
         <div class="demo-box">
           <div class="input-box">
-            <h3>AI-Generated Input</h3>
+            <h3>Input Your Text</h3>
             <textarea
-              placeholder="Paste your AI-generated text here..."
+              placeholder="Paste or type your text here for analysis..."
             ></textarea>
-            <button class="btn-primary">Humanize & Summarize</button>
+            <div class="analysis-options">
+              <label><input type="checkbox" checked /> Summarize</label>
+              <label
+                ><input type="checkbox" checked /> Sentiment Analysis</label
+              >
+              <label><input type="checkbox" /> Keyword Extraction</label>
+            </div>
+            <button class="btn-primary">Analyze Text</button>
           </div>
           <div class="output-box">
-            <h3>Humanized Output</h3>
+            <h3>Analysis Results</h3>
             <div class="output-result">
-              <p>Your humanized and summarized content will appear here...</p>
+              <div class="result-tabs">
+                <button class="tab-active">Summary</button>
+                <button>Metrics</button>
+                <button>Visualization</button>
+              </div>
+              <div class="result-content">
+                <p>
+                  Your comprehensive analysis will appear here with summary, key
+                  metrics, and visualizations...
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="use-cases">
+      <h2>Who Can Benefit?</h2>
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <i class="fas fa-book-reader"></i>
+          <h3>Researchers</h3>
+          <p>
+            Quickly analyze large volumes of academic papers and extract key
+            findings.
+          </p>
+        </div>
+        <div class="use-case-card">
+          <i class="fas fa-briefcase"></i>
+          <h3>Business Professionals</h3>
+          <p>
+            Process reports, emails, and documents to identify trends and
+            actionable insights.
+          </p>
+        </div>
+        <div class="use-case-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>Content Creators</h3>
+          <p>
+            Analyze your writing style and optimize content for better
+            engagement.
+          </p>
+        </div>
+        <div class="use-case-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Students</h3>
+          <p>Summarize lengthy readings and identify key concepts for study.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="how-it-works" id="how-it-works">
-      <h2>How It Works</h2>
+      <h2>Our Analysis Process</h2>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Paste Your AI Text</h3>
-          <p>Copy and paste any AI-generated content into our system.</p>
+          <h3>Text Processing</h3>
+          <p>
+            Our AI breaks down your text into components for comprehensive
+            analysis.
+          </p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Advanced Processing</h3>
+          <h3>Pattern Recognition</h3>
           <p>
-            Our AI analyzes and rewrites the content using natural language
-            patterns.
+            Advanced algorithms identify key themes, entities, and
+            relationships.
           </p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Get Human-Like Output</h3>
-          <p>
-            Receive content that reads like it was written by a human expert.
-          </p>
+          <h3>Insight Generation</h3>
+          <p>Transform raw analysis into actionable insights and summaries.</p>
         </div>
       </div>
     </section>
 
     <section class="pricing" id="pricing">
-      <h2>Simple, Transparent Pricing</h2>
+      <h2>Flexible Pricing Plans</h2>
       <div class="pricing-cards">
         <div class="pricing-card">
-          <h3>Starter</h3>
-          <div class="price">$9.99<span>/month</span></div>
+          <h3>Basic</h3>
+          <div class="price">$14.99<span>/month</span></div>
           <ul>
-            <li>Up to 10,000 words/month</li>
-            <li>Basic humanization</li>
+            <li>Up to 50 analyses/month</li>
             <li>Standard summarization</li>
+            <li>Basic text metrics</li>
             <li>Email support</li>
           </ul>
           <a href="#" class="btn-secondary">Get Started</a>
@@ -150,13 +207,13 @@
         <div class="pricing-card featured">
           <div class="popular-badge">Most Popular</div>
           <h3>Professional</h3>
-          <div class="price">$19.99<span>/month</span></div>
+          <div class="price">$29.99<span>/month</span></div>
           <ul>
-            <li>Up to 50,000 words/month</li>
-            <li>Advanced humanization</li>
-            <li>Smart summarization</li>
+            <li>Up to 200 analyses/month</li>
+            <li>Advanced analysis features</li>
+            <li>Detailed visualizations</li>
             <li>Priority support</li>
-            <li>Tone customization</li>
+            <li>API access</li>
           </ul>
           <a href="#" class="btn-primary">Get Started</a>
         </div>
@@ -164,11 +221,11 @@
           <h3>Enterprise</h3>
           <div class="price">Custom</div>
           <ul>
-            <li>Unlimited words</li>
-            <li>Premium humanization</li>
-            <li>Advanced summarization</li>
-            <li>24/7 support</li>
-            <li>API access</li>
+            <li>Unlimited analyses</li>
+            <li>All premium features</li>
+            <li>Custom analysis models</li>
+            <li>Dedicated support</li>
+            <li>Team management</li>
           </ul>
           <a href="#" class="btn-secondary">Contact Sales</a>
         </div>
@@ -179,10 +236,10 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="logo">
-            <i class="fas fa-robot"></i>
-            <span>HumanizeAI</span>
+            <i class="fas fa-chart-line"></i>
+            <span>TextAnalyzerAI</span>
           </div>
-          <p>Making AI content sound human since 2023.</p>
+          <p>Transforming text into insights through AI analysis.</p>
           <div class="social-icons">
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -196,20 +253,20 @@
           <a href="#demo">Demo</a>
         </div>
         <div class="footer-section">
-          <h3>Company</h3>
-          <a href="#">About Us</a>
+          <h3>Resources</h3>
+          <a href="#">Documentation</a>
+          <a href="#">API Reference</a>
           <a href="#">Blog</a>
-          <a href="#">Careers</a>
         </div>
         <div class="footer-section">
-          <h3>Legal</h3>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
+          <h3>Company</h3>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 HumanizeAI. All rights reserved.</p>
+        <p>&copy; 2025 TextAnalyzerAI. All rights reserved.</p>
       </div>
     </footer>
   </body>

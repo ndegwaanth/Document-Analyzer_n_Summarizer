@@ -1,19 +1,19 @@
 /* Base Styles */
 :root {
-    --primary-color: #6c63ff;
-    --secondary-color: #4d44db;
-    --accent-color: #ff6584;
-    --dark-color: #2d3748;
-    --light-color: #f7fafc;
-    --gray-color: #a0aec0;
-    --success-color: #48bb78;
+    --primary-color: #4f46e5;
+    --secondary-color: #4338ca;
+    --accent-color: #10b981;
+    --dark-color: #1f2937;
+    --light-color: #f9fafb;
+    --gray-color: #6b7280;
+    --success-color: #10b981;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -37,17 +37,18 @@ a {
     background-color: var(--primary-color);
     color: white;
     padding: 0.8rem 1.5rem;
-    border-radius: 30px;
+    border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 .btn-secondary {
@@ -55,15 +56,14 @@ a {
     background-color: white;
     color: var(--primary-color);
     padding: 0.8rem 1.5rem;
-    border-radius: 30px;
+    border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--light-color);
     transform: translateY(-2px);
 }
 
@@ -79,7 +79,7 @@ a {
 
 /* Header & Hero Section */
 header.hero {
-    background: linear-gradient(135deg, #f5f7ff 0%, #f9faff 100%);
+    background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
     min-height: 90vh;
     padding-top: 1rem;
 }
@@ -189,13 +189,15 @@ nav {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e7eb;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
 }
 
 .feature-card i {
@@ -215,7 +217,7 @@ nav {
 
 /* Demo Section */
 .demo {
-    background: linear-gradient(135deg, #f5f7ff 0%, #f9faff 100%);
+    background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
     padding: 6rem 0;
 }
 
@@ -235,8 +237,9 @@ nav {
     display: flex;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    border: 1px solid #e5e7eb;
 }
 
 .input-box, .output-box {
@@ -245,7 +248,7 @@ nav {
 }
 
 .input-box {
-    border-right: 1px solid #eee;
+    border-right: 1px solid #e5e7eb;
 }
 
 .input-box h3, .output-box h3 {
@@ -258,20 +261,113 @@ nav {
     width: 100%;
     height: 200px;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #e5e7eb;
     border-radius: 8px;
     resize: none;
     margin-bottom: 1.5rem;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-box textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.analysis-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.analysis-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--gray-color);
 }
 
 .output-result {
-    background: #f9f9f9;
+    background: #f9fafb;
     border-radius: 8px;
-    padding: 1rem;
     height: 200px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.result-tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.result-tabs button {
+    padding: 0.8rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gray-color);
+    border-bottom: 2px solid transparent;
+}
+
+.result-tabs button.tab-active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.result-content {
+    padding: 1rem;
+    height: calc(200px - 45px);
     overflow-y: auto;
-    border: 1px dashed #ddd;
+}
+
+/* Use Cases Section */
+.use-cases {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.use-cases h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.use-case-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+}
+
+.use-case-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.use-case-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.use-case-card p {
+    color: var(--gray-color);
 }
 
 /* How It Works Section */
@@ -300,8 +396,9 @@ nav {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     position: relative;
+    border: 1px solid #e5e7eb;
 }
 
 .step-number {
@@ -333,7 +430,7 @@ nav {
 /* Pricing Section */
 .pricing {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #f5f7ff 0%, #f9faff 100%);
+    background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
     text-align: center;
 }
 
@@ -357,13 +454,14 @@ nav {
     background: white;
     padding: 2.5rem 2rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     position: relative;
+    border: 1px solid #e5e7eb;
 }
 
 .pricing-card.featured {
     border: 2px solid var(--primary-color);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .popular-badge {
@@ -506,7 +604,7 @@ footer {
     
     .input-box {
         border-right: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #e5e7eb;
     }
     
     .pricing-card.featured {
@@ -523,7 +621,7 @@ footer {
         font-size: 2rem;
     }
     
-    .features-grid, .steps {
+    .features-grid, .steps, .use-cases-grid {
         grid-template-columns: 1fr;
     }
     
