@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Humanizer & Summarizer | Transform AI Text Naturally</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <div class="logo">
+          <i class="fas fa-robot"></i>
+          <span>HumanizeAI</span>
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="{% url 'login' %}" class="btn-secondary">Login</a>
+          <a href="{% url 'signup' %}" class="btn-primary">Get Started</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            Transform AI Text into
+            <span class="highlight">Natural Human Writing</span>
+          </h1>
+          <p>
+            Our advanced AI humanizer makes computer-generated content sound
+            authentically human while preserving its meaning and quality.
+          </p>
+          <div class="cta-buttons">
+            <a href="#demo" class="btn-primary">Try Demo</a>
+            <a href="#how-it-works" class="btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="{% static 'images/few.jpeg' %}"
+            alt="AI Humanizer Illustration"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="features" id="features">
+      <h2>Powerful Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-language"></i>
+          <h3>Natural Language Conversion</h3>
+          <p>
+            Transform robotic AI text into flowing, natural human language that
+            resonates with readers.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-compress-alt"></i>
+          <h3>Smart Summarization</h3>
+          <p>
+            Condense lengthy content while maintaining key points and
+            readability.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-fingerprint"></i>
+          <h3>Undetectable Rewriting</h3>
+          <p>Make AI content pass as human-written even under scrutiny.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-sliders-h"></i>
+          <h3>Tone Adjustment</h3>
+          <p>
+            Customize the output tone from casual to professional based on your
+            needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="demo">
+      <div class="demo-container">
+        <h2>See It in Action</h2>
+        <div class="demo-box">
+          <div class="input-box">
+            <h3>AI-Generated Input</h3>
+            <textarea
+              placeholder="Paste your AI-generated text here..."
+            ></textarea>
+            <button class="btn-primary">Humanize & Summarize</button>
+          </div>
+          <div class="output-box">
+            <h3>Humanized Output</h3>
+            <div class="output-result">
+              <p>Your humanized and summarized content will appear here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Paste Your AI Text</h3>
+          <p>Copy and paste any AI-generated content into our system.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Advanced Processing</h3>
+          <p>
+            Our AI analyzes and rewrites the content using natural language
+            patterns.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Get Human-Like Output</h3>
+          <p>
+            Receive content that reads like it was written by a human expert.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2>Simple, Transparent Pricing</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="price">$9.99<span>/month</span></div>
+          <ul>
+            <li>Up to 10,000 words/month</li>
+            <li>Basic humanization</li>
+            <li>Standard summarization</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#" class="btn-secondary">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Professional</h3>
+          <div class="price">$19.99<span>/month</span></div>
+          <ul>
+            <li>Up to 50,000 words/month</li>
+            <li>Advanced humanization</li>
+            <li>Smart summarization</li>
+            <li>Priority support</li>
+            <li>Tone customization</li>
+          </ul>
+          <a href="#" class="btn-primary">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">Custom</div>
+          <ul>
+            <li>Unlimited words</li>
+            <li>Premium humanization</li>
+            <li>Advanced summarization</li>
+            <li>24/7 support</li>
+            <li>API access</li>
+          </ul>
+          <a href="#" class="btn-secondary">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <i class="fas fa-robot"></i>
+            <span>HumanizeAI</span>
+          </div>
+          <p>Making AI content sound human since 2023.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Product</h3>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#demo">Demo</a>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HumanizeAI. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
